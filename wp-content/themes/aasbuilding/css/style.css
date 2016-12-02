@@ -57,7 +57,7 @@ p {
 header {
   height: 100vh;
   position: relative;
-  background: url("../img/background-img.jpg");
+  background: url("../../../../wp-content/uploads/2016/12/background-img.jpg");
   background-size: cover;
   background-attachment: fixed;
   background-repeat: no-repeat;
@@ -92,7 +92,7 @@ footer {
 
 /* line 103, ../sass/style.scss */
 .logo-footer {
-  padding: 40px;
+  padding: 20px;
 }
 @media screen and (max-width: 500px) {
   /* line 103, ../sass/style.scss */
@@ -116,31 +116,38 @@ footer {
 .footer-nav #menu-main-1 {
   display: flex;
 }
-/* line 118, ../sass/style.scss */
+@media screen and (max-width: 500px) {
+  /* line 115, ../sass/style.scss */
+  .footer-nav #menu-main-1 {
+    display: block;
+  }
+}
+/* line 121, ../sass/style.scss */
 .footer-nav li {
   text-transform: uppercase;
   letter-spacing: 3px;
   padding: 40px;
 }
-/* line 122, ../sass/style.scss */
+/* line 125, ../sass/style.scss */
 .footer-nav li a {
   color: white;
 }
 
-/* line 127, ../sass/style.scss */
+/* line 130, ../sass/style.scss */
 section {
   padding-top: 80px;
   padding-bottom: 80px;
 }
 
-/* line 131, ../sass/style.scss */
+/* line 134, ../sass/style.scss */
 .main-nav {
-  background-color: rgba(255, 255, 255, 0);
+  background-color: rgba(48, 60, 102, 0.8);
   position: relative;
   display: flex;
-  justify-content: flex-end;
+  justify-content: space-between;
+  z-index: 99999;
 }
-/* line 136, ../sass/style.scss */
+/* line 140, ../sass/style.scss */
 .main-nav li {
   text-align: center;
   font-family: raleway;
@@ -149,14 +156,41 @@ section {
   font-size: 11px;
   letter-spacing: 3px;
 }
+/* line 146, ../sass/style.scss */
+.main-nav li a:hover {
+  color: white;
+  text-decoration: none;
+}
 @media screen and (max-width: 500px) {
-  /* line 131, ../sass/style.scss */
+  /* line 134, ../sass/style.scss */
   .main-nav {
     display: none;
   }
 }
 
-/* line 146, ../sass/style.scss */
+/* line 156, ../sass/style.scss */
+.hide {
+  display: none;
+}
+
+/* line 159, ../sass/style.scss */
+.fixed {
+  position: fixed;
+}
+
+/* line 162, ../sass/style.scss */
+.vcenter {
+  display: flex;
+  align-items: center;
+}
+@media screen and (max-width: 500px) {
+  /* line 162, ../sass/style.scss */
+  .vcenter {
+    display: block;
+  }
+}
+
+/* line 169, ../sass/style.scss */
 .btn {
   background: #586aa5;
   color: white;
@@ -164,13 +198,13 @@ section {
   text-align: center;
   margin-top: 20px;
 }
-/* line 152, ../sass/style.scss */
+/* line 175, ../sass/style.scss */
 .btn:hover {
   background: #303c66;
   color: white;
 }
 
-/* line 157, ../sass/style.scss */
+/* line 180, ../sass/style.scss */
 .hamburger-menu {
   position: fixed;
   top: 2%;
@@ -178,29 +212,36 @@ section {
   cursor: pointer;
   transition: 2s;
   z-index: 99999;
+  display: none;
 }
-/* line 158, ../sass/style.scss */
+/* line 182, ../sass/style.scss */
 .hamburger-menu span {
   margin: 8px;
   height: 1px;
-  background-color: white;
   display: block;
   transition: 0.5s linear;
+  background: white;
 }
-/* line 164, ../sass/style.scss */
+/* line 188, ../sass/style.scss */
 .hamburger-menu span:nth-child(1) {
   width: 70px;
 }
-/* line 167, ../sass/style.scss */
+/* line 191, ../sass/style.scss */
 .hamburger-menu span:nth-child(2) {
   width: 50px;
 }
-/* line 170, ../sass/style.scss */
+/* line 194, ../sass/style.scss */
 .hamburger-menu span:nth-child(3) {
   width: 30px;
 }
+@media screen and (max-width: 500px) {
+  /* line 180, ../sass/style.scss */
+  .hamburger-menu {
+    display: block;
+  }
+}
 
-/* line 181, ../sass/style.scss */
+/* line 208, ../sass/style.scss */
 .service-wrapper {
   width: 100%;
   height: 400px;
@@ -208,16 +249,16 @@ section {
   background: #586aa5;
 }
 
-/* line 187, ../sass/style.scss */
+/* line 214, ../sass/style.scss */
 .carousel .carousel-item {
   width: 400px;
 }
 
-/* line 190, ../sass/style.scss */
+/* line 217, ../sass/style.scss */
 .masking {
   background-clip: text;
   -webkit-background-clip: text;
-  background-image: linear-gradient(rgba(46, 49, 146, 0.27), rgba(46, 49, 146, 0.44)), url(../img/background-img.jpg);
+  background-image: linear-gradient(rgba(46, 49, 146, 0.27), rgba(46, 49, 146, 0.44)), url("../../../../wp-content/uploads/2016/12/background-img.jpg");
   background-size: cover;
   color: transparent;
   animation: animatedBackground linear 15s infinite;
@@ -226,12 +267,12 @@ section {
   -o-animation: animatedBackground linear 15s infinite;
 }
 
-/* line 202, ../sass/style.scss */
+/* line 229, ../sass/style.scss */
 .transform1 {
   transform: scaleX(0.5);
 }
 
-/* line 205, ../sass/style.scss */
+/* line 232, ../sass/style.scss */
 .collapse-menu {
   position: fixed;
   width: 100%;
@@ -247,16 +288,16 @@ section {
   letter-spacing: 3px;
   font-family: montserrat;
 }
-/* line 217, ../sass/style.scss */
+/* line 244, ../sass/style.scss */
 .collapse-menu li {
   margin: 3%;
 }
-/* line 219, ../sass/style.scss */
+/* line 246, ../sass/style.scss */
 .collapse-menu li a {
   color: white;
 }
 
-/* line 225, ../sass/style.scss */
+/* line 252, ../sass/style.scss */
 .info-wrapper {
   font-size: 25px;
   color: #303c66;
@@ -272,20 +313,20 @@ section {
   cursor: pointer;
   background: rgba(255, 255, 255, 0.47);
 }
-/* line 226, ../sass/style.scss */
+/* line 253, ../sass/style.scss */
 .info-wrapper i {
   position: absolute;
   transform: translateX(-50%) translateY(-50%);
   left: 50%;
   top: 50%;
 }
-/* line 232, ../sass/style.scss */
+/* line 259, ../sass/style.scss */
 .info-wrapper:hover {
   background: white;
   color: #303c66;
 }
 
-/* line 247, ../sass/style.scss */
+/* line 274, ../sass/style.scss */
 .scroll-section {
   position: absolute;
   bottom: 4%;
@@ -294,18 +335,18 @@ section {
   cursor: pointer;
   animation: bounce 1.5s ease-out infinite alternate;
 }
-/* line 253, ../sass/style.scss */
+/* line 280, ../sass/style.scss */
 .scroll-section i {
   font-size: 20px;
   color: white;
 }
 
-/* line 259, ../sass/style.scss */
+/* line 286, ../sass/style.scss */
 .block-title {
   position: relative;
   margin-bottom: 80px;
 }
-/* line 260, ../sass/style.scss */
+/* line 287, ../sass/style.scss */
 .block-title:after {
   content: "";
   width: 20%;
@@ -317,23 +358,36 @@ section {
   top: 120%;
 }
 
-/* line 273, ../sass/style.scss */
+/* line 300, ../sass/style.scss */
 #about, #map, #contact {
   background-attachment: fixed;
   background-repeat: no-repeat;
 }
 
-/* line 277, ../sass/style.scss */
+/* line 304, ../sass/style.scss */
 #map {
   background-color: #e0e1e6;
 }
 
-/* line 281, ../sass/style.scss */
-#contact {
-  background: linear-gradient(to top, rgba(255, 255, 255, 0.3), rgba(255, 255, 255, 0.5)), url("../img/bg-section.jpg");
+/* line 308, ../sass/style.scss */
+.dpt {
+  cursor: pointer;
+  transition: 0.5s ease-in;
+  z-index: 99998;
+}
+/* line 312, ../sass/style.scss */
+.dpt:hover {
+  fill: #fce57e;
+  transform: scale(1.05);
+  z-index: 99999;
 }
 
-/* line 285, ../sass/style.scss */
+/* line 318, ../sass/style.scss */
+#contact {
+  background: linear-gradient(to top, rgba(255, 255, 255, 0.3), rgba(255, 255, 255, 0.5)), url("../../../../wp-content/uploads/2016/12/bg-section.jpg");
+}
+
+/* line 322, ../sass/style.scss */
 form {
   background: rgba(255, 255, 255, 0.7);
   padding: 80px;
@@ -341,28 +395,28 @@ form {
   margin: 0 auto;
 }
 @media screen and (max-width: 500px) {
-  /* line 285, ../sass/style.scss */
+  /* line 322, ../sass/style.scss */
   form {
     width: 100%;
     padding: 20px;
   }
 }
-/* line 294, ../sass/style.scss */
+/* line 331, ../sass/style.scss */
 form label {
   font-size: 20px;
   color: #586aa5;
   font-weight: 100;
 }
-/* line 299, ../sass/style.scss */
+/* line 336, ../sass/style.scss */
 form input {
   height: 44px;
 }
-/* line 302, ../sass/style.scss */
+/* line 339, ../sass/style.scss */
 form textarea {
   height: 200px;
   border: 1px solid #586aa5;
 }
-/* line 306, ../sass/style.scss */
+/* line 343, ../sass/style.scss */
 form .btn {
   width: 100%;
   color: white;
@@ -374,21 +428,21 @@ form .btn {
   border-radius: 0px;
   height: 44px;
 }
-/* line 313, ../sass/style.scss */
+/* line 350, ../sass/style.scss */
 form .btn:hover {
   color: white;
 }
 
-/* line 318, ../sass/style.scss */
+/* line 355, ../sass/style.scss */
 .service-content {
   margin-top: 20%;
 }
-/* line 319, ../sass/style.scss */
+/* line 356, ../sass/style.scss */
 .service-content .icon-service {
   color: white;
   font-size: 60px;
 }
-/* line 323, ../sass/style.scss */
+/* line 360, ../sass/style.scss */
 .service-content .btn {
   width: 100%;
   color: white;
