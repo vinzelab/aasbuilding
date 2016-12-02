@@ -1,10 +1,7 @@
 <footer>
       <img class="logo-footer img-responsive" src="img/logo_footer.svg" alt="logo">
   <div class="footer-nav">
-    <div class="footer-nav-item">accueil</div>
-    <div class="footer-nav-item">services</div>
-    <div class="footer-nav-item">réseau</div>
-    <div class="footer-nav-item">contact</div>
+    <?php wp_nav_menu(array('theme_location'=>'footer')) ?>
   </div>
 </footer>
   <script src="https://code.jquery.com/jquery-3.1.1.min.js" integrity="sha256-hVVnYaiADRTO2PzUGmuLJr8BLUSjGIZsDYGmIJLv2b8=" crossorigin="anonymous"></script>

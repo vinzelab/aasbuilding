@@ -19,13 +19,13 @@
 
 </head>
 <header  class="parallax-window">
-
 	<nav class="main-nav z-depth-3">
-		<div class="nav-item">accueil</div>
+		<?php wp_nav_menu(array('theme_location'=>'primary')) ?>
+		<!-- <div class="nav-item">accueil</div>
 		<div class="nav-item">services</div>
 		<div class="nav-item">réseau</div>
 		<div class="nav-item">contact</div>
-		<div class="nav-item"><i class="ion-social-facebook"></i></div>
+		<div class="nav-item"><i class="ion-social-facebook"></i></div> -->
 	</nav>
 	<div class="hamburger-menu">
 		<span></span>
@@ -33,10 +33,7 @@
 		<span></span>
 	</div>
 	<div class="collapse-menu">
-		<div class="collapse-nav-item">Accueil</div>
-		<div class="collapse-nav-item">Les services</div>
-		<div class="collapse-nav-item">Le réseau</div>
-		<div class="collapse-nav-item">Nous contacter</div>
+		<?php wp_nav_menu(array('theme_location'=>'hamburger')) ?>
 	</div>
 	<img id="logo" src="img/logo_AAS.svg" alt="logo AAS building">
 	<div class="scroll-section">

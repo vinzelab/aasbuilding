@@ -112,29 +112,32 @@ footer{
     text-align: center;
     display: block;
   }
-  .footer-nav-item{
+  #menu-main-1{
+    display: flex;
+  }
+  li{
     text-transform: uppercase;
     letter-spacing: 3px;
     padding: 40px;
+    a{
+      color: white;
+    }
   }
 }
 section{
   padding-top:$section-padding;
   padding-bottom:$section-padding;
 }
-nav{
+.main-nav{
   background-color:rgba(255, 255, 255, 0);
   position: relative;
   display: flex;
   justify-content: flex-end;
-  display: none;
-  .nav-item{
-    width: 10%;
+  li{
     text-align: center;
     font-family: raleway;
-    text-transform: uppercase;
-    letter-spacing: 3px;
-    font-size: 11px;
+    padding-left: 30px;
+    @include title-layout(11px);
   }
   @media screen and (max-width: 500px) {
     display: none;
@@ -207,15 +210,18 @@ nav{
     display:none;
     z-index: 99998;
     transition: 1s linear;
-  }
-
-  .collapse-nav-item {
     text-align: center;
     color: white;
     @include title-layout(3rem);
     font-family: montserrat;
-    margin-top: 5%;
+    li{
+      margin: 3%;
+      a{
+      color: white;
+      }
+    }
   }
+
   .info-wrapper{
     i{
       position: absolute;
